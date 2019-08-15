@@ -66,7 +66,7 @@ class MainActivity : AppCompatActivity() {
 
             // use main thread here for the sake of simplicity
             val bitmap = when (requestCode) {
-                BITMAP_FACTORY_SCALE -> decodeScaledBitmap(image) // ignore exif orientation flags
+                BITMAP_FACTORY_SCALE -> decodeScaledBitmap(image) // ignore exif orientation tags
                 REGION_DECODER_SCALE_AND_CROP -> decodeScaledAndCroppedBitmap(image) // ignore exif
                 IMAGE_DECODER_SCALE -> decodeScaledBitmapWithTargetSize(image) // respect exif
                 IMAGE_DECODER_SCALE_AND_CROP -> decodeScaledBitmapWithTargetSampleSize(image)// respect exif
